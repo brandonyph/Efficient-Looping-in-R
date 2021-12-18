@@ -40,7 +40,7 @@ while(j<5){
 # I like to use FOR more than While
 ```
 
-2.  Using list in loops
+# Using list in loops
 
 ``` r
 list1 <- c("Hello","How","Do","You","Do","Today")
@@ -58,7 +58,7 @@ for(i in list1){
     ## [1] "Do"
     ## [1] "Today"
 
-3.  Interrupting Loops and Skipping Elements
+# Interrupting Loops and Skipping Elements
 
 ``` r
 # Break
@@ -106,7 +106,7 @@ for(i in list1){
     ## [1] "Do"
     ## [1] "Today"
 
-3.  Efficient Looping?
+# Efficient Looping?
 
 -   Don’t make objects you dont use
 -   Garbage collections
@@ -207,7 +207,7 @@ system.time(
 ```
 
     ##    user  system elapsed 
-    ##    2.86    0.08    3.36
+    ##    3.17    0.09    4.46
 
 ``` r
 # Using a dataframe
@@ -220,7 +220,7 @@ system.time(
 ```
 
     ##    user  system elapsed 
-    ##    2.72    0.02    3.11
+    ##    4.21    0.07    7.36
 
 ``` r
 #Use Numerical 
@@ -233,7 +233,7 @@ system.time(
 ```
 
     ##    user  system elapsed 
-    ##       0       0       0
+    ##    0.02    0.00    0.04
 
 ``` r
 # Declare Size of output prior to loops
@@ -250,7 +250,7 @@ system.time(
 ```
 
     ##    user  system elapsed 
-    ##    2.71    0.14    3.91
+    ##    3.69    0.28    9.41
 
 ``` r
 P3 <- seq(1,length(cycle))
@@ -262,7 +262,7 @@ system.time(
 ```
 
     ##    user  system elapsed 
-    ##    0.16    0.03    0.39
+    ##    0.20    0.02    0.50
 
 # In Summary, do as little as possible inside the loop
 
@@ -271,7 +271,7 @@ system.time(
 -   Iterate on as few numbers as possible
 -   Write as little functions inside a loop as possible
 
-4.  Parallel Computing
+# Finally, Parallel Computing
 
 -   Change the cycle number to understand the effects of multiple
     computing
@@ -286,7 +286,7 @@ system.time(
 ```
 
     ##    user  system elapsed 
-    ##    0.04    0.00    0.03
+    ##       0       0       0
 
 ``` r
 library(doSNOW)
@@ -314,7 +314,7 @@ system.time(
     ## Warning: executing %dopar% sequentially: no parallel backend registered
 
     ##    user  system elapsed 
-    ##    2.82    0.04    3.10
+    ##    4.41    0.06    8.31
 
 ``` r
 stopCluster(cl)
